@@ -3,7 +3,7 @@ class ClassmatesController < ApplicationController
 
   # GET /classmates
   def index
-    @classmates = Classmate.all
+    @classmates = Classmate.select(:id, :name, :email).all
 
     render json: @classmates
   end
